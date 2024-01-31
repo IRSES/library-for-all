@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Managers\LibraryManager.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\LibraryItem.cs" />
     <Compile Include="Models\LibraryTable.cs" />
