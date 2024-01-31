@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
+    [Serializable]
     public abstract class LibraryItem
     {
         private int id;

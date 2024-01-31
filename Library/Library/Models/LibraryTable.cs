@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
+    [Serializable]
     public class LibraryTable
     {
         // Dictionary for storing data, where the key is a section, the value is a list of elements in the section

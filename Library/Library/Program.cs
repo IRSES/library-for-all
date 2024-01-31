@@ -1,14 +1,15 @@
 ﻿using Library.Models;
 using System.IO;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.Data;
 
 namespace Library
 {
+    [Serializable]
     public class Program
     {
         static void Main(string[] args)
@@ -22,6 +23,8 @@ namespace Library
                 Console.WriteLine("1: Print Table.");
                 Console.WriteLine("2: Create Section.");
                 Console.WriteLine("3: Delete Section.");
+                Console.WriteLine("4: Save Data to File.");
+                Console.WriteLine("5: Load Data from File.");
                 Console.WriteLine("0: Exit.");
 
                 Console.WriteLine("Choose option: ");
@@ -79,6 +82,14 @@ namespace Library
                             Console.WriteLine("Enter section name to remove:");
                             string sectionToRemove = Console.ReadLine();
                             table.RemoveItem(sectionToRemove);
+                            break;
+                        case 4:
+                            DataManager.SaveDataToFile(table);
+                            Console.WriteLine("Data saved to file.");
+                            break;
+                        case 5:
+                            table = DataManager.LoadDataFromFile();
+                            Console.WriteLine("Data loaded from file.");
                             break;
                         case 0:
                             Console.WriteLine("Thanks for your time!");
